@@ -4,8 +4,13 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
+    color: #c78f22;
 }
 
-img {
+.error-indicator img {
     margin-bottom: 30px;
+}
+
+.error-indicator .boom {
+    font-size: 1.7rem;
 }
