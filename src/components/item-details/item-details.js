@@ -32,7 +32,9 @@ export default class ItemDetails extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.itemId !== prevProps.itemId) {
+    if (this.props.itemId !== prevProps.itemId ||
+      this.props.getData !== prevProps.getData ||
+      this.props.getImageUrl !== prevProps.getImageUrl) {
       this.updateItem();
     }
   }
@@ -68,7 +70,7 @@ export default class ItemDetails extends Component {
       )
     }
 
-    const { id, name, gender, birthYear, eyeColor } = item;
+    const { name } = item;
 
     return (
       <div className="item-details card">
@@ -85,8 +87,8 @@ export default class ItemDetails extends Component {
               })
             }
           </ul>
-        </div>
         <ErrorButton />
+        </div>
       </div>
     )
   }

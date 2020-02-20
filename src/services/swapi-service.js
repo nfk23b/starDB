@@ -8,7 +8,7 @@ export default class SwapiService {
         const res = await fetch(`${this._apiBase}${url}`);
 
         if (!res.ok) {
-            throw new Error(`Could't fetch ${url}` + `, recieved ${res.status}`);
+            throw new Error(`Could't fetch ${url}, recieved ${res.status}`);
         }
         return await res.json();
     };
